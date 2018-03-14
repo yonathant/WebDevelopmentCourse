@@ -1,0 +1,195 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+html, body {
+  height: 100%;
+}
+h1,h2,h3,h4,h5,h6,p {
+  font-family: "Open Sans";
+}
+main {
+  display: flex;
+  align-self: center;
+  height: 100%;
+  background: url("../BG.jpg") no-repeat fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+}
+
+#container {
+  margin: auto;
+  position: relative;
+  background: inherit;
+  width: 700px;
+  height: 600px;
+  z-index: 1;
+  overflow: hidden;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 .5em 1em rgba(0,0,0,0.4);
+  border-radius:30px 50px;
+  text-align: center;
+  
+}
+#container::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom:0;left: 0;
+  background: inherit;
+  box-shadow: inset 0 0 3000px rgba(255,255,255,0.5);
+  filter: blur(30px);
+}
+
+#profile_img {
+  width: 100px;
+  height: 100px;
+  background-image: url('../profile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+
+}
+h1 { 
+  font-size: 1.8em;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 300;
+}
+h2 {
+  color: white;
+  font-size: 0.8em;
+}
+
+#menu {
+  margin: 8%;
+  display: block;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+}
+#menu ul li {
+  position: relative;
+  display: inline-block;
+  margin: 3%;
+  padding: 10px;
+  width: 120px;
+  border-bottom: 1px solid white;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#menu ul li:hover {
+  color: rgba(120, 120, 120, 100);
+  cursor: default;
+}
+#menu .visible { 
+  visibility: hidden;
+  width: 140px;
+  height: 100px; 
+  background-color: rgba(251, 255, 253, 0);
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -10%;
+  margin-left: -130px;
+  color: rgba(211, 215, 215, 0);
+  font-size: 1em;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#menu span.visible { 
+  padding-top: 40px; 
+}
+#occupation:hover .visible { 
+  visibility: visible;
+  background-color: rgba(251, 255, 253, 0.3);
+  top: 100%;
+  color: rgba(211, 215, 215, 100);
+}
+#education:hover .visible { 
+  visibility: visible;
+  background-color: rgba(251, 255, 253, 0.3);
+  top: 100%;
+  color: rgba(211, 215, 215, 100);
+}
+#hobbies:hover .visible { 
+  visibility: visible;
+  background-color: rgba(251, 255, 253, 0.3);
+  top: 100%;
+  color: rgba(211, 215, 215, 100);
+}
+
+#social-icons {
+  list-style-type: none;
+  color: white;
+  padding-top: 100px;
+}
+#social-icons li {
+  display: inline;
+}
+#social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 3em;
+}
+.social-icon {
+  margin: 0 50px;
+}
+.fa-facebook {
+  padding: 10px 15px;
+  -o-transition:.4s;
+  -ms-transition:.4s;
+  -moz-transition:.4s;
+  -webkit-transition:.4s;
+  transition: .4s;
+  color: gray;
+}
+.fa-facebook:hover {
+  color: #3d5b99;
+}
+.fa-instagram {
+  padding: 10px 15px;
+  -o-transition:.4s;
+  -ms-transition:.4s;
+  -moz-transition:.4s;
+  -webkit-transition:.4s;
+  transition: .4s;
+  color: gray;
+}
+.fa-instagram:hover {
+  color: #8a3ab9;
+}
+.fa-at {
+  padding: 10px 15px;
+  -o-transition:.4s;
+  -ms-transition:.4s;
+  -moz-transition:.4s;
+  -webkit-transition:.4s;
+  transition: .4s;
+  color: gray;
+}
+.fa-at:hover {
+  color: #dd4b39;
+}
+footer { 
+  position: absolute;
+  align-self: flex-end;
+  z-index: 2;
+  right: 40%;
+  bottom: 4%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7em;
+  display: inline;
+}
