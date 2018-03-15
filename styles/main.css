@@ -71,7 +71,7 @@ h2 {
   color: white;
   font-size: 1em;
   font-weight: 400;
-  rgba(251, 255, 253, 0.050);
+  background-color: rgba(251, 255, 253, 0.1);
 }
 #menu ul li {
   position: relative;
