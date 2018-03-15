@@ -71,6 +71,7 @@ h2 {
   color: white;
   font-size: 1em;
   font-weight: 400;
+  rgba(251, 255, 253, 0.050);
 }
 #menu ul li {
   position: relative;
@@ -117,19 +118,19 @@ h2 {
 }
 #occupation:hover .visible { 
   visibility: visible;
-  background-color: rgba(251, 255, 253, 0.3);
+  background-color: rgba(251, 255, 253, 0.1);
   top: 100%;
   color: rgba(211, 215, 215, 100);
 }
 #education:hover .visible { 
   visibility: visible;
-  background-color: rgba(251, 255, 253, 0.3);
+  background-color: rgba(251, 255, 253, 0.1);
   top: 100%;
   color: rgba(211, 215, 215, 100);
 }
 #hobbies:hover .visible { 
   visibility: visible;
-  background-color: rgba(251, 255, 253, 0.3);
+  background-color: rgba(251, 255, 253, 0.1);
   top: 100%;
   color: rgba(211, 215, 215, 100);
 }
