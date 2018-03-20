@@ -1,12 +1,23 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 html, body {
   height: 100%;
 }
-h1,h2,h3,h4,h5,h6,p {
-  font-family: 'Open Sans', sans-serif;
+h1,h2,h3,h4,h5,h6,p,a,span {
+  font-family: 'Raleway', sans-serif;
 }
+/*main {
+  display: flex;
+  align-self: center;
+  height: 100%;
+  padding-top: 3rem;
+}
+main:before {
+  content:"";
+  border-bottom: 100vh solid #283E51;
+  border-left: 100vw solid rgb(12, 82, 12);
+  position:fixed;
+}*/
 main {
   display: flex;
   align-self: center;
@@ -15,6 +26,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 3rem;
+  -webkit-filter: contrast(90%) grayscale(10%);
+  filter: contrast(90%) grayscale(10%);  
 }
 
 #container {
@@ -22,13 +35,13 @@ main {
   position: relative;
   background: inherit;
   width: 700px;
-  height: 600px;
+  height: 620px;
   z-index: 1;
   overflow: hidden;
   padding: 2rem 0;
   box-sizing: border-box;
-  box-shadow: 0 .5em 1em rgba(0,0,0,0.5);
-  border-radius:30px 50px;
+  box-shadow: 0 .5em 1em rgba(0,0,0,0.7);
+  border-radius:20px 40px;
   text-align: center;
   
 }
@@ -38,7 +51,7 @@ main {
   position: absolute;
   top: 0; right: 0; bottom:0;left: 0;
   background: inherit;
-  box-shadow: inset 0 0 3000px rgba(255,255,255,0.15);
+  box-shadow: inset 0 0 3000px rgba(255,255,255,0.14);
   filter: blur(30px);
 }
 
@@ -55,102 +68,115 @@ main {
 }
 h1 { 
   font-size: 1.8em;
-  color: white;
+  color: rgb(20, 20, 20);
   display: inline-block;
   padding: 10px;
   font-weight: 300;
 }
 h2 {
-  color: white;
+  color: rgb(20, 20, 20);
   font-size: 0.8em;
+  font-weight: lighter;
 }
 
 #menu {
-  margin: 8% 0;
+  margin: 1%;
   display: block;
-  color: white;
+  color: rgb(20, 20, 20);
   font-size: 1em;
   font-weight: 400;
   background-color: rgba(251, 255, 253, 0.03);
-  border-radius: 10px;
+  border-radius: 30px;
+  cursor: default;
 }
 #menu ul li {
   position: relative;
   display: inline-block;
   margin: 3%;
-  padding: 10px;
-  width: 120px;
-  border-bottom: 1px solid white;
-  color: white;
+  color: rgb(20, 20, 20);
   letter-spacing: 0.12em;
   line-height: 1.2em;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-#menu ul li:hover {
-  color: rgba(120, 120, 120, 100);
-  cursor: default;
-}
-#menu .visible { 
-  visibility: hidden;
-  width: 140px;
-  height: 100px; 
-  background-color: rgba(251, 255, 253, 0);
   text-align: center;
-  padding: 30px;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 1;
-  top: -10%;
-  margin-left: -130px;
-  color: rgba(211, 215, 215, 0);
-  font-size: 1em;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
-#menu span.visible { 
-  padding-top: 40px; 
-}
-#occupation:hover .visible { 
-  visibility: visible;
-  background-color: rgba(251, 255, 253, 0.1);
-  top: 100%;
-  color: rgba(211, 215, 215, 100);
-}
-#education:hover .visible { 
-  visibility: visible;
-  background-color: rgba(251, 255, 253, 0.1);
-  top: 100%;
-  color: rgba(211, 215, 215, 100);
-}
-#hobbies:hover .visible { 
-  visibility: visible;
-  background-color: rgba(251, 255, 253, 0.1);
-  top: 100%;
-  color: rgba(211, 215, 215, 100);
+.hovering {
+	font-size: 1.2em;
+	padding: 0 10px 20px;
+	-webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  text-decoration: none;
+  color: black;
 }
 
+.hovering:hover {
+	color: rgb(255, 255, 255);
+}
+
+.hovering::before {
+	content: '';
+	position: absolute;
+  height: 0.1em;
+	width: 80%;
+  top: 90%;
+  right: 10%;
+	z-index: -1;
+	background: rgb(255, 255, 255);
+	-webkit-transform: rotate3d(0,0,1,180deg) scale3d(0,1,1);
+	transform: rotate3d(0,0,1,180deg) scale3d(0,1,1);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.hovering:hover::before {
+	-webkit-transform: rotate3d(0,0,1,180deg) scale3d(1,1,1);
+	transform: rotate3d(0,0,1,180deg) scale3d(1,1,1);
+}
+
+.hovering span {
+	font-size: 0.5em;
+	font-weight: bold;
+  position: absolute;
+  top: 100%;
+	right: -20%;
+	color: #f31154;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translate3d(-10px,-10px,0);
+	transform: translate3d(-10px,-10px,0);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.hovering:hover span {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+#information {
+  margin: 2em auto 0 auto;
+  width: 70%;
+  line-height: 1.5em;
+}
+#information h2{
+  font-size: 1.3em;
+  font-weight: bold;
+}
 #social-icons {
+  padding-top: 1em;
   list-style-type: none;
-  color: white;
-  padding-top: 100px;
+  position: absolute;
+  left: 26%;
+  bottom: 7%;
 }
 #social-icons li {
   display: inline;
 }
 #social-icons a {
-  color: white;
   text-decoration: none;
   font-size: 3em;
 }
 .social-icon {
-  margin: 0 50px;
+  margin: 0 20px;
 }
 .fa-facebook {
   padding: 10px 15px;
@@ -159,7 +185,7 @@ h2 {
   -moz-transition:.4s;
   -webkit-transition:.4s;
   transition: .4s;
-  color: gray;
+  color: rgba(100, 100, 100, 0.5);
 }
 .fa-facebook:hover {
   color: #3d5b99;
@@ -171,7 +197,7 @@ h2 {
   -moz-transition:.4s;
   -webkit-transition:.4s;
   transition: .4s;
-  color: gray;
+  color: rgba(100, 100, 100, 0.5);
 }
 .fa-instagram:hover {
   color: #8a3ab9;
@@ -183,18 +209,16 @@ h2 {
   -moz-transition:.4s;
   -webkit-transition:.4s;
   transition: .4s;
-  color: gray;
+  color: rgba(100, 100, 100, 0.5);
 }
 .fa-at:hover {
   color: #dd4b39;
 }
 footer { 
   position: absolute;
-  align-self: flex-end;
+  left: 30%;
+  bottom: 5%;
   z-index: 2;
-  right: 40%;
-  bottom: 4%;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(20, 20, 20, 0.8);
   font-size: 0.7em;
-  display: inline;
 }
