@@ -26,8 +26,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 3rem;
-  -webkit-filter: brightness(110%) contrast(90%) grayscale(10%);
-  filter: brightness(110%) contrast(90%) grayscale(10%);  
+  -webkit-filter: brightness(120%) contrast(90%) grayscale(10%);
+  filter: brightness(120%) contrast(90%) grayscale(10%);  
 }
 
 #container {
