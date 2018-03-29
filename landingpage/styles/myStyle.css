@@ -9,12 +9,14 @@ body
 }
 #container {
     margin: 0 auto;
-    width: 1440px;
+    width: 1400px;
+    display: block;
+    overflow: auto;
 }
 #hero_img {
     background-image: url('../hero.png');
     background-size: cover;
-    width: 100%;
+    width: 98%;
     height: 500px;
     position: relative;
 }
@@ -39,7 +41,7 @@ body
 }
 #form h1 {
     color: white;
-    font-size: 2.6em;
+    font-size: 2.5em;
     letter-spacing: 0.3px;
 }
 #form>p {
@@ -131,7 +133,7 @@ body
     left: 50%;
 }
 .select{
-    margin: 2em 0 4em 0;
+    margin: 1em 0 3em 0;
 }
 .select select { 
     width: 100%;
@@ -184,7 +186,7 @@ body
     justify-content: center;
 }
 .infos h3 {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
     color: cadetblue;
 }
 #info_blocks .infos:first-child h3 {
@@ -235,13 +237,13 @@ body
     content: " ";
     position: absolute;
     right: 50%;
-    bottom: 58px;
+    bottom: 57px;
     border-top: 2px solid lightgray;
-    width: 64.2%;
+    width: 64%;
     margin-right: -32%;
 }
 #banner {
-    margin: -32px auto 20px auto;
+    margin: -30px auto 20px auto;
     background-image: url('../banner.png');
     background-size: cover;
     background-repeat: no-repeat; 
@@ -253,9 +255,6 @@ body
     -moz-box-shadow: 0px 0px 30px 0px rgba(4, 6, 9, 0.1);
     box-shadow: 0px 0px 30px 0px rgba(4, 6, 9, 0.1);
     transition: all 0.2s ease-in-out;
-}
-a.banner {
-    width: 84%;
 }
 #banner:hover {
     -webkit-box-shadow: 0px 0px 30px 0px rgba(4, 6, 9, 0.16);
