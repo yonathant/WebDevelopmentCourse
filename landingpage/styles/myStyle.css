@@ -206,6 +206,7 @@ body
     width: 25%;
     height: 14rem;
     float: right;
+    display: inline-table;
     margin: 1% 1%;
     padding: 3rem 2.5%;
     text-align: center;
@@ -225,9 +226,10 @@ body
     content: " ";
     position: absolute;
     right: 50%;
-    bottom: -16%;
-    height: 50px;
+    bottom: -15.5%;
+    height: 70px;
     border-right: 2px solid lightgray;
+    z-index:-1;
 }
 .middle:after {
     bottom: -106px;
@@ -239,7 +241,7 @@ body
     right: 50%;
     bottom: 57px;
     border-top: 2px solid lightgray;
-    width: 64%;
+    width: 64.15%;
     margin-right: -32%;
 }
 #banner {
