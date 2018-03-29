@@ -9,7 +9,7 @@ body
 }
 #container {
     margin: 0 auto;
-    width: 1400px;
+    width: 100vw;
     display: block;
     overflow: auto;
 }
